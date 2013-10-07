@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".HttpExample">
+
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="fill_parent"></ScrollView>
+
+    <TextView android:text="Loading Data" android:id="@+id/tvHttp"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#91ff0c"
+        android:layout_margin="40dp" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:id="@+id/imageView2"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/bottum" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnAdd2List"
+        android:onClick="add2List"
+        android:layout_gravity="left|bottom"
+        android:background="@android:drawable/ic_input_add"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="-5dp" />
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/btnOpenWeb"
+        android:layout_gravity="right|bottom"
+        android:onClick="openWEB"
+        android:background="@android:drawable/ic_dialog_info"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="100dp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@drawable/top" />
+
+
+
+</FrameLayout>

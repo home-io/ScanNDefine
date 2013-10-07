@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:id="@+id/textView"
+            android:paddingTop="30dp"
+            android:textColor="#91ff0c"
+            android:paddingLeft="20dp" />
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@drawable/top" />
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:id="@+id/imageButton"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/bottum" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/btnExit"
+        android:layout_alignTop="@+id/btnScan"
+        android:layout_toRightOf="@+id/btnScan"
+        android:layout_alignParentBottom="true"
+        android:onClick="appEXIT"
+        android:textSize="25dp"
+        android:padding="1dp"
+        android:layout_gravity="right|bottom"
+        android:background="@layout/style_exit_btn"/>
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/btnScan"
+        android:layout_centerHorizontal="true"
+        android:onClick="lookupUPC"
+        android:layout_alignParentBottom="true"
+        android:singleLine="false"
+        android:layout_alignParentLeft="false"
+        android:padding="1dp"
+        android:textSize="25dp"
+        android:background="@layout/style_scan_btn"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/btnList"
+        android:layout_alignTop="@+id/btnScan"
+        android:layout_toLeftOf="@+id/btnScan"
+        android:layout_alignParentBottom="true"
+        android:onClick="openLIST"
+        android:textSize="25dp"
+        android:padding="1dp"
+        android:layout_gravity="left|bottom"
+        android:background="@layout/style_list_btn" />
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- The main content view -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!-- The navigation drawer -->
+        <ListView android:id="@+id/left_drawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:background="#111"/>
+    </android.support.v4.widget.DrawerLayout>
+
+</FrameLayout>
+
+
